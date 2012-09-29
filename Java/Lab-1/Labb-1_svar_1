@@ -1,0 +1,117 @@
+﻿DB2004
+
+Labb 1
+
+1.
+
+
+public class Vinkel{
+
+    public static void main(String[] args){
+
+	double vinkel=Double.parseDouble(args[0]);
+
+	double vinkel_rad=Math.toRadians(vinkel);
+
+	System.out.print(Math.sin(vinkel_rad) * Math.sin(vinkel_rad) + Math.cos(vinkel_rad) * Math.cos(vinkel_rad));
+    }
+}
+
+2.
+
+public class LabbEtt{
+
+	public static void main(String[] args){
+
+    	int a=10;
+	int b=3;
+
+	System.out.print((double)a/b);
+	}
+}
+
+3.
+
+a)
+
+"2bc"
+
+b)
+
+"5bc"
+
+c)
+
+"5bc"
+
+d)
+
+"bc5"
+
+e)
+
+"bc23"
+
+4.
+
+public class Rest{
+
+    public static void main(String [] cmdLn){
+
+	int a = Integer.parseInt(cmdLn[0]);
+
+	int b = Integer.parseInt(cmdLn[1]);
+
+	int c = a%b;
+
+	if (c==0){
+
+	    System.out.print("true");
+	}
+
+    }
+
+}
+
+5.
+
+public class Dice_1{
+
+    public static void main(String[] args){
+
+	System.out.println(((int) (Math.random()*6+1)));
+    }
+}
+
+6.
+
+public class Dice_2{
+
+    public static void main(String[] args){
+
+	int dice_1=((int) (Math.random() * 6 + 1));
+	int dice_2=((int) (Math.random() * 6 + 1));
+
+	System.out.println(dice_1 + " " + dice_2) ;
+    }
+}
+
+7.
+
+public class VeckoDag {
+    public static void main(String[] args) { 
+        int d = Integer.parseInt(args[0]);
+        int m = Integer.parseInt(args[1]);
+        int y = Integer.parseInt(args[2]);
+
+        int y0 = y - (14 - m) / 12;
+        int x = y0 + y0/4 - y0/100 + y0/400;
+        int m0 = m + 12 * ((14 - m) / 12) - 2;
+        int d0 = (d + x + (31*m0)/12) % 7;
+
+        System.out.println(d0);
+    }
+
+}
+
+
